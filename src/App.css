@@ -1,38 +1,54 @@
+* {
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
 .App {
-  text-align: center;
+	height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+	background-color: #badc58;
+	height: 10vh;
+	margin: 0px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.main {
+	background-color: #6ab04c;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 90vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.beastDisplay {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 90vw;
 }
 
-.App-link {
-  color: #61dafb;
+.hornedBeast {
+	background-color: #dff9fb;
+	padding: 50px;
+	text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hornedBeast h2 {
+	font-size: 2rem;
+}
+
+.hornedBeast img {
+	width: 10vw;
+	height: 15vh;
+}
+
+.footer {
+	background-color: #badc58;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
