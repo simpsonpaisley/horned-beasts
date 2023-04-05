@@ -1,28 +1,47 @@
 import HornedBeast from './HornedBeast';
 
+const beastArray = [
+	{
+		_id: 1,
+		image_url:
+			'http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg',
+		title: 'UniWhal',
+		description: 'A unicorn and a narwhal nuzzling their horns',
+		keyword: 'narwhal',
+		horns: 1,
+	},
+
+	{
+		_id: 2,
+		image_url:
+			'https://images.unsplash.com/photo-1512636618879-bbe79107e9e3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bd9460ee6d1ddbb6b1ca7be86dfc4590&auto=format&fit=crop&w=1825&q=80',
+		title: 'Rhino Family',
+		description: 'Parent rhino with two babies',
+		keyword: 'rhino',
+		horns: 2,
+	},
+
+	{
+		_id: 3,
+		image_url:
+			'https://www.dhresource.com/0x0s/f2-albu-g5-M00-1A-11-rBVaI1hsIIiALxKzAAIHjSU3VkE490.jpg/wholesale-halloween-costume-prop-unicorn.jpg',
+		title: 'Unicorn Head',
+		description: 'Someone wearing a very silly unicorn head mask',
+		keyword: 'unicorn',
+		horns: 1,
+	},
+];
+
 function Main() {
-	return (
-		<div className="main">
-			<h1>Horned Beasts</h1>
-			<div className="beastDisplay">
-				<HornedBeast
-					title="Rhino"
-					imageURL="https://www.savingthesurvivors.org/wp-content/uploads/2022/10/black_rhino_tn-280x300.png"
-					description="Rhinos can run at speeds of up to 30mph"
-				/>
-				<HornedBeast
-					title="Deer"
-					imageURL="https://nationalzoo.com.au/wp-content/uploads/2017/03/fallow-deer.png"
-					description="There are over 60 different species of deer worldwide. Deer are present on all continents except Antarctica. They can live in a range of habitats, from mountainous areas to warm and wet rainforests. The Barbary red deer is the only species present in Africa"
-				/>
-				<HornedBeast
-					title="Goat"
-					imageURL="https://p7.hiclipart.com/preview/332/112/893/rove-goat-sheep-stock-photography-stock-illustration-vector-kawaii-goat.jpg"
-					description="Goats are able to differentiate between happy and unhappy human faces. And they have been found to prefer happy faces! "
-				/>
-			</div>
-		</div>
-	);
+	return beastArray.map(({ title, description, image_url }) => (
+		<>
+			<HornedBeast
+				imageURL={image_url}
+				title={title}
+				description={description}
+			/>
+		</>
+	));
 }
 
 export default Main;

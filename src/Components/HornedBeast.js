@@ -1,5 +1,4 @@
-function HornedBeast(props) {
-	let { title, description, imageURL } = props;
+function HornedBeast({ title, description, imageURL }) {
 	return (
 		<div className="hornedBeast">
 			<h2>{title}</h2>
