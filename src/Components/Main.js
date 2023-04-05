@@ -30,6 +30,37 @@ const beastArray = [
 		keyword: 'unicorn',
 		horns: 1,
 	},
+
+	{
+		_id: 4,
+		image_url:
+			'https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Bubo_virginianus_06.jpg/1200px-Bubo_virginianus_06.jpg',
+		title: 'Great Horned Owl',
+		description: 'Owl',
+		keyword: 'owl',
+		horns: 2,
+	},
+
+	{
+		_id: 5,
+		image_url:
+			'https://upload.wikimedia.org/wikipedia/commons/1/12/Jackson%27s_Chameleon_2_edit1.jpg',
+		title: "Jackson's Chameleon",
+		description: 'Three-horned chameleon',
+		keyword: 'lizard',
+		horns: 3,
+	},
+
+	{
+		_id: 6,
+		image_url:
+			'https://ourmarinespecies.com/wp-content/uploads/2018/12/Horned_marine_species_2-1024x695.jpg',
+		title: 'Cowfish',
+		description:
+			'The cow fish is a variety of boxfish (Ostraciidae) which is easily recognizable by the long horns that protrude in front of its head, similar to those of a cow or a bull.',
+		keyword: 'fish',
+		horns: 2,
+	},
 ];
 
 function Main() {
