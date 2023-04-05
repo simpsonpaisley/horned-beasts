@@ -1,5 +1,6 @@
 * {
 	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	margin: 0px;
 }
 
 .App {
@@ -32,7 +33,7 @@
 }
 
 .hornedBeast {
-	background-color: #dff9fb;
+	background-color: #f5f6fa;
 	padding: 50px;
 	text-align: center;
 	width: 30vw;
@@ -48,9 +49,32 @@
 	height: 15vh;
 }
 
+.hornedBeast p,
+h2,
+img {
+	margin: 10px;
+}
+
+.voting {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.voting button {
+	margin: 20px;
+	background-color: #badc58;
+	height: 5vh;
+	width: 8vw;
+}
+
 .footer {
 	background-color: #badc58;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+
+.footer p {
+	margin: 10px;
 }

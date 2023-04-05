@@ -7,16 +7,17 @@ function HornedBeast({ title, description, imageURL }) {
 		addVote(votes + 1);
 	}
 	return (
-		<div
-			className="hornedBeast"
-			onClick={voteHandler}>
+		<div className="hornedBeast">
 			<h2>{title}</h2>
 			<img
 				src={imageURL}
 				alt={title}
 				title={title}></img>
 			<p>{description}</p>
-			<h3>Votes: {votes}</h3>
+			<div className="voting">
+				<button onClick={voteHandler}>Vote</button>
+				<h3>Votes: {votes}</h3>
+			</div>
 		</div>
 	);
 }
