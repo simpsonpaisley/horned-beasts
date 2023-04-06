@@ -1,7 +1,17 @@
 * {
-	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 	margin: 0px;
 	color: #505a67;
+}
+
+h1,
+h2,
+h3 {
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	letter-spacing: 2px;
+}
+
+p {
+	font-family: sans-serif;
 }
 
 .App {
@@ -9,7 +19,7 @@
 }
 
 .header {
-	background-color: #abc4aa;
+	background-color: #f0f3ec;
 	height: 10vh;
 	margin: 0px;
 	display: flex;
@@ -22,15 +32,17 @@
 }
 
 .main {
-	background-color: #f3deba;
+	background-image: linear-gradient(#3fc33c, #3cc37d, #82c33c);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	padding-bottom: 20px;
 }
 
 .main h1 {
 	margin: 20px;
+	color: #f0f3ec;
 }
 
 .beastDisplay {
@@ -43,7 +55,7 @@
 }
 
 .hornedBeast {
-	background-color: #abc4aa;
+	background-color: #f0f3ec;
 	padding: 50px;
 	width: 20vw;
 	height: 50vh;
@@ -80,10 +92,20 @@ img {
 
 .voting button {
 	margin: 20px;
-	background-color: #f3deba;
+	background-color: #82c33c;
 	height: 5vh;
 	width: 8vw;
 	border-radius: 5px;
+	border: none;
+	box-shadow: 2px 2px 5px #505a67;
+	transition-duration: 0.5s;
+	transition-timing-function: ease-in;
+}
+
+.voting button:hover {
+	box-shadow: none;
+	transition-duration: 0.25s;
+	transition-timing-function: ease-in;
 }
 
 .voting h3 {
@@ -91,7 +113,7 @@ img {
 }
 
 .footer {
-	background-color: #abc4aa;
+	background-color: #f0f3ec;
 	display: flex;
 	align-items: center;
 	justify-content: center;
