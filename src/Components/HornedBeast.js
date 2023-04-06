@@ -16,7 +16,7 @@ function HornedBeast({ title, description, imageURL }) {
 			<p>{description}</p>
 			<div className="voting">
 				<button onClick={voteHandler}>Vote</button>
-				<h3>Votes: {votes}</h3>
+				<h3>🐾 {votes}</h3>
 			</div>
 		</div>
 	);
