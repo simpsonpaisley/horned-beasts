@@ -1,6 +1,6 @@
-function Footer() {
+function Footer({ theme }) {
 	return (
-		<div className="footer">
+		<div className={`${theme} footer`}>
 			<p>Paisley Simpson</p>
 		</div>
 	);

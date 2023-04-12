@@ -1,6 +1,5 @@
 * {
 	margin: 0px;
-	color: #505a67;
 }
 
 h1,
@@ -24,7 +23,31 @@ p {
 	margin: 0px;
 	display: flex;
 	align-items: center;
-	justify-content: flex-start;
+	justify-content: space-between;
+	color: #505a67;
+}
+
+.lightDark {
+	background-color: #3fc33d;
+	border: none;
+	padding: 10px 20px 10px 20px;
+	margin-right: 10px;
+	border-radius: 10px;
+	font-weight: 900;
+	box-shadow: 2px 2px 5px #505a67;
+	transition-duration: 0.5s;
+	transition-timing-function: ease-in;
+}
+
+.lightDark:hover {
+	box-shadow: none;
+	transition-duration: 0.5s;
+	transition-timing-function: ease-in;
+}
+
+.darkMode {
+	background-color: #28262d;
+	color: white;
 }
 
 .header h1 {
@@ -42,7 +65,7 @@ p {
 
 .main h1 {
 	margin: 20px;
-	color: #f0f3ec;
+	color: #bcccdc;
 }
 
 .beastDisplay {
@@ -67,6 +90,7 @@ p {
 	justify-content: flex-start;
 	text-align: center;
 	box-shadow: 2px 2px 5px #505a67;
+	color: #505a67;
 }
 
 .hornedBeast h2 {
@@ -122,4 +146,43 @@ img {
 
 .footer p {
 	margin: 10px;
+	color: #505a67;
+}
+
+.modal {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	justify-self: center;
+	height: 75%;
+	width: 95%;
+	margin: 20px;
+	margin-left: 40px;
+	background-color: #f0f3ec;
+	border-radius: 10px;
+	box-shadow: 2px 2px 5px #505a67;
+	position: fixed;
+	left: 0px;
+}
+
+.modalBackground {
+	width: 99vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0px;
+	background-color: rgb(211, 211, 211, 0.6);
+}
+
+.darkMode {
+	background-color: #28262d;
+	color: #bcccdc;
+}
+
+.darkModemain {
+	background-image: none;
+	background-color: #102a43;
 }
