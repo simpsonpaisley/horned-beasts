@@ -1,9 +1,13 @@
-function BeastModal({ theme, modalHandler }) {
+function BeastModal({ theme, modalHandler, modalInformation }) {
 	return (
 		<div className="modalBackground">
-			<div className={`${theme} modal`}>
+			<div className={`${theme + 'Mode'} modal`}>
 				<button onClick={modalHandler}>X</button>
-				<p>This is working.</p>
+				<h2>{modalInformation.title}</h2>
+				<img
+					src={modalInformation.image_url}
+					className="modalImage"
+					alt={modalInformation.title}></img>
 			</div>
 		</div>
 	);

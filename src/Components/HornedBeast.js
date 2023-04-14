@@ -1,20 +1,20 @@
 import { useState } from 'react';
 
-function HornedBeast({ title, description, imageURL, theme, modalHandler }) {
+function HornedBeast({ beast, modalHandler, theme }) {
 	const [votes, addVote] = useState(0);
 
 	function voteHandler() {
 		addVote(votes + 1);
 	}
 	return (
-		<div className={`${theme} hornedBeast`}>
-			<h2 onClick={modalHandler}>{title}</h2>
+		<div className={`${theme + 'Mode'} hornedBeast`}>
+			<h2 onClick={() => modalHandler(beast)}>{beast.title}</h2>
 			<img
-				src={imageURL}
-				alt={title}
-				title={title}
-				onClick={modalHandler}></img>
-			<p>{description}</p>
+				src={beast.image_url}
+				alt={beast.title}
+				title={beast.title}
+				onClick={() => modalHandler(beast)}></img>
+			<p>{beast.description}</p>
 			<div className="voting">
 				<button onClick={voteHandler}>Vote</button>
 				<h3>🐾 {votes}</h3>

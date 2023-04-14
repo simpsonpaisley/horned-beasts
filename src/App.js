@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import Header from './Components/Header';
 import Main from './Components/Main';
@@ -8,25 +8,34 @@ import BeastModal from './Components/BeastModal';
 function App() {
 	// Function for Dark/Light Mode
 
-	const [theme, setTheme] = useState('lightMode');
+	const [theme, setTheme] = useState('');
 
 	function handleMode() {
-		if (theme === 'darkMode') {
-			setTheme('lightMode');
-			console.log(theme);
+		if (theme === 'dark') {
+			setTheme('light');
 		} else {
-			setTheme('darkMode');
-			console.log(theme);
+			setTheme('dark');
 		}
 	}
 
+	/* 	useEffect(() => {
+		localStorage.setItem('userTheme', JSON.stringify(theme));
+
+		const userTheme = JSON.parse(localStorage.getItem('userTheme'));
+
+		if (userTheme) {
+			setTheme(userTheme);
+		}
+	});
+ */
 	// Function for Modal Pop-Up
 
 	const [modalState, setModalState] = useState(false);
+	const [modalInformation, setModalInformation] = useState({});
 
-	function modalHandler() {
+	function modalHandler(beast) {
 		setModalState(!modalState);
-		console.log('Is this working?');
+		setModalInformation(beast);
 	}
 
 	// Function for Modal Information
@@ -43,7 +52,7 @@ function App() {
 				<BeastModal
 					modalHandler={modalHandler}
 					theme={theme}
-					modalInformationHandler={modalInformationHandler}
+					modalInformation={modalInformation}
 				/>
 			)}
 			<Main

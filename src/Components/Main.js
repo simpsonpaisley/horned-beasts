@@ -3,14 +3,12 @@ import data from './data.json';
 
 function Main({ theme, modalHandler }) {
 	return (
-		<div className={`${theme + 'main'} main`}>
+		<div className={`${theme + 'Mode' + 'main'} main`}>
 			<h1>Horned Beast Encyclopeadia</h1>
 			<div className="beastDisplay">
-				{data.map(({ title, description, image_url, _id, keyword, horns }) => (
+				{data.map((beast) => (
 					<HornedBeast
-						title={title}
-						imageURL={image_url}
-						description={description}
+						beast={beast}
 						theme={theme}
 						modalHandler={modalHandler}
 					/>
